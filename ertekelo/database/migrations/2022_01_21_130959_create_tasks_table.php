@@ -18,6 +18,7 @@ class CreateTasksTable extends Migration
             $table->string('name');
             $table->string('URL');
             $table->string('rating');
+            $table->string('comment');
             $table->timestamps();
         });
     }

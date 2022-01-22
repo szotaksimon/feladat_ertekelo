@@ -17,6 +17,7 @@ class TaskFactory extends Factory
             'name' => $this->faker->words(1, true),
             'URL' => $this->faker->url(),
             'rating' => $this->faker->numberBetween(0,0),
+            'comment' => "-"
         ];
     }
 }

@@ -7,11 +7,12 @@
     <title>Rating Tasks</title>
 </head>
 <body>
-    <table>
+    <table style="text-align: center;">
         <tr>
             <th>ID</th>
             <th>Task Name</th>
             <th>URL</th>
+            <th>Comment</th>
             <th>Rating</th>
             @foreach ($tasks as $task)
                 <tr>
@@ -19,6 +20,14 @@
                     <td>{{ $task->name }}</td>
                     <td>{{ $task->URL }}</td>
                     <td>{{ $task->rating }}</td>
+                    <td>{{ $task->comment }}</td>
+                    <td>
+                        <form">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Törlés</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tr>
